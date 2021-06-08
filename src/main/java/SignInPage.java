@@ -13,8 +13,7 @@ public class SignInPage {
 
     private By emailAdress = By.id("email_create");
     private By createAccountButton = By.id("SubmitCreate");
-    private By error = By.xpath("//*[@id=\"create_account_error\"]/ol/li");
-    private By errorFrame = By.id("create_account_error");
+
 
     String email = "korushovv" + System.currentTimeMillis() + "@mail.ru";
 
@@ -34,10 +33,6 @@ public class SignInPage {
         return new NewAccountPage(driver);
     }
 
-    public SignInPage InvalidEmailError() {
-        driver.findElement(error).getText();
-        return this;
-    }
 
 
 
