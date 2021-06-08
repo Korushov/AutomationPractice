@@ -46,7 +46,6 @@ public class RegistrationTest {
     public void RegisterInvalidEmailTest() {
         SignInPage signInPage = mainPage.clickSignIn();
         signInPage.CreateAccount("emaaaaaaail");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("create_account_error"))));
         MainPage.isloadComplete(driver);
